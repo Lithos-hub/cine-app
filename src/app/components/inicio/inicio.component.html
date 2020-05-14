@@ -1,0 +1,29 @@
+<div class="jumbotron animated fadeIn fast" id="jumbotronInicio">
+    <h1 class="display-4" style="text-shadow: 0 0 10px black;">CineApp</h1>
+    <p class="lead text-light" style="text-shadow: 0 0 10px black;">CineApp es una aplicación sobre cine donde podrás estar al día de los últimos estrenos, buscar películas de diferentes plataformas ver tráilers, ¡y mucho más! </p>
+</div>
+
+
+<div class="container" *ngIf="imagenes != []">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" *ngFor="let imagen of imagenes | slice:4:14; let i = index" [attr.data-slide-to]="i" ngClass="i == 0 ? 'active' : ''"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item" *ngFor="let imagen of imagenes | slice:4:14; let k = index" [ngClass]="k == 0 ? 'item active' : 'item'">
+                <img class="d-block w-100" [src]="url + imagen.poster_path" style="margin: 0 auto; margin-bottom: 80px; max-width: 500px">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="lead text-light"> {{ imagen.title }} ({{ imagen.release_date | date:'yyyy'}}) </h5>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>

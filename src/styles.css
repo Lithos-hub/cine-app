@@ -1,1 +1,161 @@
-/* You can add global styles to this file, and also import other style files */
+#sidenav {
+    width: 100px;
+    background-color: #282a36;
+    position: fixed;
+    bottom: 0px;
+    top: 0px;
+    text-align: center;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    transition: 0.5s;
+}
+
+#sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+#sidenav a:hover {
+    color: #f1f1f1;
+}
+
+#sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#v-pills-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    opacity: 0;
+}
+
+body {
+    background-color: #141215;
+}
+
+#contenido {
+    transition: margin-left .5s;
+    margin-left: 80px;
+}
+
+.nav-link {
+    color: #2bd1ff !important;
+}
+
+.nav-link:hover {
+    color: white !important;
+}
+
+#jumbotronInicio {
+    background-color: #2f2d30;
+}
+
+#jumbotronesapp {
+    background-color: #9f7c43;
+}
+
+#btnMenu {
+    cursor: pointer;
+    color: #2bd1ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 30px;
+    left: 25px;
+    top: 50%;
+}
+
+hr {
+    background-color: #2bd1ff;
+    box-shadow: 0 0 5px white, 0 0 15px #c9f3ff;
+}
+
+h1 {
+    color: #bf9e3b !important;
+}
+
+.div-pic-1 {
+    width: 100%;
+    height: 300px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.pic-titulo {
+    position: absolute;
+    bottom: 0px;
+    left: 10px;
+    padding: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.div-pic-2 {
+    width: 100%;
+    height: 200px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+/* Animaciones */
+
+.animated {
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fast {
+    -webkit-animation-duration: 0.7s;
+    animation-duration: 0.7s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+#btnMenu:hover {
+    text-shadow: 0 0 15px white;
+    transition: 1s;
+}

@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "cineappv2"
+    }
+  },
+  "defaultProject": "cineappv2",
+  "cli": {
+    "analytics": false
+  }
 }

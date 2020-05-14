@@ -1,0 +1,35 @@
+<div class="mySidenav">
+    <div class="row container-fluid" id="sidenav">
+        <div class="col-4" *ngIf="mostrar">
+            <a href="javascript:void(0)" class="closebtn" (click)="mostrar = !mostrar; desplegar = true" onclick="closeNav()">&times;</a>
+
+        </div>
+        <div class="col-4" *ngIf="mostrar">
+
+            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+
+            </div>
+
+
+            <a class="nav-link" routerLinkActive="active" [routerLink]="['inicio']" id="tab1" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Inicio</a>
+            <a class="nav-link" routerLinkActive="active" [routerLink]="['populares']" id="tab2" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Películas populares</a>
+            <a class="nav-link" routerLinkActive="active" [routerLink]="['cartelera']" id="tab3" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">En cartelera</a>
+            <a class="nav-link" routerLinkActive="" [routerLink]="" id="tab4" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Por género</a>
+            <a class="nav-link" routerLinkActive="" [routerLink]="" id="tab5" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Ranking</a>
+            <a class="nav-link" routerLinkActive="" [routerLink]="" id="tab6" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Sagas</a>
+            <a class="nav-link" routerLinkActive="" [routerLink]="" id="tab7" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Trailers</a>
+            <a class="nav-link" routerLinkActive="" [routerLink]="" id="tab8" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Crítica</a>
+            <a class="nav-link" routerLinkActive="" [routerLink]="" id="tab9" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Netflix</a>
+            <a class="nav-link" routerLinkActive="" [routerLink]="" id="tab10" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">HBO</a>
+            <a class="nav-link" routerLinkActive="" [routerLink]="" id="tab11" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Prime Video</a>
+
+
+
+        </div>
+
+        <div class="col-4" *ngIf="desplegar">
+            <span id="btnMenu" (click)="mostrar = !mostrar; desplegar = !desplegar; mostrarMenu()" onclick="openNav()">&#9776;</span>
+        </div>
+
+    </div>
+</div>
