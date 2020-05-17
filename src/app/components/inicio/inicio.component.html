@@ -1,10 +1,27 @@
-<div class="jumbotron animated fadeIn fast" id="jumbotronInicio">
+<div class="jumbotron animated fadeIn fast responsive" id="jumbotronInicio">
     <h1 class="display-4" style="text-shadow: 0 0 10px black;">CineApp</h1>
-    <p class="lead text-light" style="text-shadow: 0 0 10px black;">CineApp es una aplicación sobre cine donde podrás estar al día de los últimos estrenos, buscar películas de diferentes plataformas ver tráilers, ¡y mucho más! </p>
+    <p class="lead text-light" style="text-shadow: 0 0 10px black;">CineApp es una aplicación sobre cine donde podrás estar al día de los últimos estrenos, buscar películas de diferentes plataformas, ver tráilers, ¡y mucho más! </p>
+</div>
+
+<div class="container-fluid embed-responsive animated fadeIn fast">
+    <div class="row" style="border-bottom: 1px solid rgb(91, 188, 212); margin-bottom: 25px;">
+        <div id="gridInicio" class="col-1 text-info text-center" [routerLink]="['populares']"> Películas populares </div>
+        <div id="gridInicio" class="col-1 text-info text-center" [routerLink]="['generos']"> Películas por género </div>
+        <div id="gridInicio" class="col-1 text-info text-center" [routerLink]="['ranking']"> Ranking </div>
+        <div id="gridInicio" class="col-1 text-info text-center" [routerLink]="['novedades']"> Novedades </div>
+        <div id="gridInicio" class="col-1 text-info text-center" [routerLink]="['trailers']"> Trailers </div>
+        <div id="gridInicio" class="col-1 text-info text-center" [routerLink]="['critica']"> Crítica </div>
+        <div id="gridInicio" class="col-1 text-info text-center" [routerLink]="['netflix']"> Netflix </div>
+        <div id="gridInicio" class="col-1 text-info text-center" [routerLink]="['hbo']"> HBO </div>
+        <div id="gridInicio" class="col-1 text-info text-center" [routerLink]="['primevideo']"> Prime Video </div>
+        <div id="gridInicio" class="col-1 text-info text-center" [routerLink]="['sinopsis']"> Sinopsis </div>
+        <div id="gridInicio" class="col-1 text-info text-center" [routerLink]="['similares']"> Películas similares </div>
+        <div id="gridInicio" class="col-1 text-info text-center" [routerLink]="['galeria']"> Galería </div>
+    </div>
 </div>
 
 
-<div class="container" *ngIf="imagenes != []">
+<div class="container-fluid animated fadeIn fast" *ngIf="imagenes != []">
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" *ngFor="let imagen of imagenes | slice:4:14; let i = index" [attr.data-slide-to]="i" ngClass="i == 0 ? 'active' : ''"></li>

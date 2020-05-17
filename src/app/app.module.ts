@@ -6,8 +6,12 @@ import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { InicioComponent } from './components/inicio/inicio.component';
+import { GenerosComponent } from './components/generos/generos.component';
+import { RankingComponent } from './components/ranking/ranking.component';
+import { TrailersComponent } from './components/trailers/trailers.component';
+import { CriticaComponent } from './components/critica/critica.component';
 import { PopularesComponent } from './components/populares/populares.component';
-import { CarteleraComponent } from './components/cartelera/cartelera.component';
+import { NovedadesComponent } from './components/novedades/novedades.component';
 
 // RUTAS
 import { APP_ROUTING } from './app.routes';
@@ -15,9 +19,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // SERVICIOS
 import { PopularesService } from './services/populares.service';
+import { PeliculaSelecNovedadesComponent } from './components/pelicula-selec-novedades/pelicula-selec-novedades.component';
+import { AboutComponent } from './components/about/about.component';
 
 // PIPES
-// import { PopularesImagenPipe } from './pipes/populares-imagen.pipe';
+import { ImagenPeliculaPipe } from './pipes/imagen-pelicula.pipe';
 
 
 
@@ -27,8 +33,14 @@ import { PopularesService } from './services/populares.service';
     NavbarComponent,
     InicioComponent,
     PopularesComponent,
-    CarteleraComponent,
-    // PopularesImagenPipe
+    NovedadesComponent,
+    GenerosComponent,
+    RankingComponent,
+    TrailersComponent,
+    CriticaComponent,
+    PeliculaSelecNovedadesComponent,
+    AboutComponent,
+    ImagenPeliculaPipe
   ],
   imports: [
     BrowserModule,

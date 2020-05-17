@@ -1,28 +1,28 @@
-<div class="jumbotron animated fadeIn fast" id="jumbotronInicio">
-    <h1 class="display-3" style="text-shadow: 0 0 10px black;">Películas populares</h1>
-    <p class="lead text-light" style="text-shadow: 0 0 10px black;">Las películas más vistas en los últimos años.</p>
+<div class="jumbotron animated fadeIn fast responsive" id="jumbotronesapp">
+    <h1 class="display-3 embed-responsive" style="text-shadow: 0 0 10px black;">Películas populares</h1>
+    <p class="lead text-light embed-responsive" style="text-shadow: 0 0 10px black;">Las películas más vistas en los últimos años.</p>
 </div>
 
-<div class="container" *ngIf="populares">
+<div class="container animated fadeIn fast" *ngIf="populares">
 
 
 
     <div class="card mb-5" *ngFor="let popular of populares" style="background-color: transparent; border: none;">
 
-        <div class="row no-gutters">
+        <div class="row no-gutters responsive">
 
-            <div class="col-md-7 embed-responsive">
+            <div class="col-md-7 responsive">
 
-                <img [src]="url + popular.poster_path" class="card-img-top " alt="peliculaimg" style="box-shadow: 0px 0px 15px rgb(36, 36, 36), 0px 0px 5px #323335; width: 600px;">
+                <img [src]="url + popular.poster_path" class="card-img-top " alt="peliculaimg" style="box-shadow: 0px 0px 15px rgb(36, 36, 36), 0px 0px 5px #323335; max-width: 600px;">
             </div>
 
-            <div class="col-md-5 embed-responsive">
+            <div class="col-md-5 responsive">
                 <div class="card-body" style="box-shadow: 0px 0px 5px #7b8797, 0px 0px 10px #c9f3ff; min-height: 900px;">
                     <h5 class="card-title display-4 text-center text-info"> {{ popular.title | uppercase }} </h5>
 
                     <hr>
                     <p class="card-text lead text-light text-justify"> {{ popular.overview }} </p>
-                    <p class="card-text text-light text-xl-right text-muted">Año de lanzamiento: {{ popular.release_date | date:'yyyy' }}</p>
+                    <p style="position: absolute; right: 10px; bottom: 10px;" class="card-text lead text-info text-xl-right">Año de lanzamiento: {{ popular.release_date | date:'yyyy' }}</p>
 
                 </div>
 

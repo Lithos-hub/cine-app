@@ -1,3 +1,5 @@
+/* SIDENAV */
+
 #sidenav {
     width: 100px;
     background-color: #282a36;
@@ -43,15 +45,6 @@
     opacity: 0;
 }
 
-body {
-    background-color: #141215;
-}
-
-#contenido {
-    transition: margin-left .5s;
-    margin-left: 80px;
-}
-
 .nav-link {
     color: #2bd1ff !important;
 }
@@ -60,12 +53,14 @@ body {
     color: white !important;
 }
 
-#jumbotronInicio {
-    background-color: #2f2d30;
-}
-
-#jumbotronesapp {
-    background-color: #9f7c43;
+@media screen and (max-height: 600px) {
+    .mySidenav {
+        top: 0px;
+        text-align: center;
+    }
+    .mySidenav a {
+        font-size: 10px;
+    }
 }
 
 #btnMenu {
@@ -75,10 +70,119 @@ body {
     justify-content: center;
     align-items: center;
     position: absolute;
-    font-size: 30px;
-    left: 25px;
+    font-size: 25px;
     top: 50%;
+    transform: rotate(90deg);
 }
+
+#btnInicio {
+    cursor: pointer;
+    color: #2bd1ff;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 8%;
+}
+
+#btnMenu:hover {
+    color: white;
+    transition: 1s;
+}
+
+#btnInicio:hover {
+    color: white;
+    transition: 0.5s;
+}
+
+#btnInicio:focus {
+    outline: 0;
+}
+
+#btnInfo {
+    cursor: pointer;
+    color: #2bd1ff;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 8%;
+}
+
+#btnInfo:hover {
+    color: white;
+    transition: 0.5s;
+}
+
+#btnInfo:focus {
+    outline: 0;
+}
+
+
+/* BODY */
+
+body {
+    background-color: #141215;
+}
+
+#contenido {
+    transition: margin-left .5s;
+    margin-left: 80px;
+}
+
+
+/* JUMBOTRONS */
+
+#jumbotronInicio {
+    background-color: #2f2d30;
+    margin: 0 auto;
+    height: 180px;
+    width: auto;
+    padding-top: 50px;
+}
+
+#jumbotronesapp {
+    background-color: #2f2d30;
+    margin-bottom: 50px;
+}
+
+
+/* INICIO */
+
+#gridInicio {
+    border-left: 1px solid #2bd1ff;
+    padding: 20px;
+    text-align: center;
+}
+
+#gridInicio:hover {
+    border-bottom: 5px solid rgb(178, 243, 255);
+    transition: 0.3s;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* NOVEDADES */
+
+#imagenNovedades {
+    width: 600px;
+    height: 500px;
+    border: 2px solid;
+    background-size: cover;
+    background-position: center;
+}
+
+#imagenNovedades:hover {
+    filter: sepia(100%);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+
+/* ELEMENTOS GENERALES */
 
 hr {
     background-color: #2bd1ff;
@@ -86,38 +190,11 @@ hr {
 }
 
 h1 {
-    color: #bf9e3b !important;
-}
-
-.div-pic-1 {
-    width: 100%;
-    height: 300px;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-.pic-titulo {
-    position: absolute;
-    bottom: 0px;
-    left: 10px;
-    padding: 10px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.div-pic-2 {
-    width: 100%;
-    height: 200px;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    color: #2bd1ff !important;
 }
 
 
-/* Animaciones */
+/* ANIMACIONES */
 
 .animated {
     -webkit-animation-duration: 1.5s;
@@ -127,8 +204,8 @@ h1 {
 }
 
 .fast {
-    -webkit-animation-duration: 0.7s;
-    animation-duration: 0.7s;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 }
@@ -146,16 +223,29 @@ h1 {
     animation-name: fadeIn;
 }
 
-@media screen and (max-height: 450px) {
-    .sidenav {
-        padding-top: 15px;
-    }
-    .sidenav a {
-        font-size: 18px;
-    }
+
+/* BARRA SCROLL */
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
 }
 
-#btnMenu:hover {
-    text-shadow: 0 0 15px white;
-    transition: 1s;
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #212022;
+    border: 5px solid #2bd1ff;
+    width: 10;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #141215;
+    height: 100px;
+    border-radius: 15px
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #334051;
 }
