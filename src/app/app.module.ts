@@ -13,17 +13,22 @@ import { CriticaComponent } from './components/critica/critica.component';
 import { PopularesComponent } from './components/populares/populares.component';
 import { NovedadesComponent } from './components/novedades/novedades.component';
 
+// SUBCOMPONENTES
+
+import { PeliculaSelecNovedadesComponent } from './components/pelicula-selec-novedades/pelicula-selec-novedades.component';
+import { PeliculaSelecInicioComponent } from './components/pelicula-selec-inicio/pelicula-selec-inicio.component';
+
 // RUTAS
 import { APP_ROUTING } from './app.routes';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // SERVICIOS
 import { PopularesService } from './services/populares.service';
-import { PeliculaSelecNovedadesComponent } from './components/pelicula-selec-novedades/pelicula-selec-novedades.component';
 import { AboutComponent } from './components/about/about.component';
 
 // PIPES
 import { ImagenPeliculaPipe } from './pipes/imagen-pelicula.pipe';
+import { PeliculaSelecGeneroComponent } from './components/pelicula-selec-genero/pelicula-selec-genero.component';
 
 
 
@@ -40,7 +45,9 @@ import { ImagenPeliculaPipe } from './pipes/imagen-pelicula.pipe';
     CriticaComponent,
     PeliculaSelecNovedadesComponent,
     AboutComponent,
-    ImagenPeliculaPipe
+    ImagenPeliculaPipe,
+    PeliculaSelecInicioComponent,
+    PeliculaSelecGeneroComponent
   ],
   imports: [
     BrowserModule,

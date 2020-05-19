@@ -9,7 +9,7 @@
     <div class="row row-cols-1 row-cols-md-4" *ngIf="novedades">
         <div class="card w-100" *ngFor="let novedad of novedades; let i = index" style="max-width: 300px; background-color: transparent; border: none;">
             <div class="col mb-2">
-                <div class="img-thumbnail" [routerLink]="['/pelicula',novedad.id, 'novedades']" id="imagenNovedades" [ngStyle]="{'background-image': 'url( '+ ( novedad | novedadesImagen ) +' )'}">
+                <div class="img-thumbnail" [routerLink]="['/pelicula-novedades',novedad.id, 'novedades']" id="imagenNovedades" [ngStyle]="{'background-image': 'url( '+ ( novedad | novedadesImagen ) +' )'}">
                 </div>
                 <div class="card-body">
                     <h5 class="card-title text-center text-info"> {{ novedad.title }}</h5>

@@ -1,5 +1,5 @@
 <div class="jumbotron animated fadeIn fast responsive" id="jumbotronInicio">
-    <h1 class="display-4" style="text-shadow: 0 0 10px black;">CineApp</h1>
+    <h1 style="text-shadow: 0 0 10px black; font-weight: 100;">CineApp</h1>
     <p class="lead text-light" style="text-shadow: 0 0 10px black;">CineApp es una aplicación sobre cine donde podrás estar al día de los últimos estrenos, buscar películas de diferentes plataformas, ver tráilers, ¡y mucho más! </p>
 </div>
 
@@ -28,7 +28,7 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item" *ngFor="let imagen of imagenes | slice:4:14; let k = index" [ngClass]="k == 0 ? 'item active' : 'item'">
-                <img class="d-block w-100" [src]="url + imagen.poster_path" style="margin: 0 auto; margin-bottom: 80px; max-width: 500px">
+                <img [routerLink]="['/pelicula-inicio',imagen.id, 'inicio']" class="d-block w-100" [src]="url + imagen.poster_path" id="peliculasInicio">
                 <div class="carousel-caption d-none d-md-block">
                     <h5 class="lead text-light"> {{ imagen.title }} ({{ imagen.release_date | date:'yyyy'}}) </h5>
                 </div>

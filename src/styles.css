@@ -125,11 +125,13 @@
 
 body {
     background-color: #141215;
+    height: auto;
 }
 
 #contenido {
     transition: margin-left .5s;
     margin-left: 80px;
+    height: auto;
 }
 
 
@@ -164,6 +166,18 @@ body {
     cursor: pointer;
 }
 
+#peliculasInicio {
+    margin: 0 auto;
+    margin-bottom: 80px;
+    max-width: 500px;
+}
+
+#peliculasInicio:hover {
+    filter: sepia(100%);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
 
 /* NOVEDADES */
 
@@ -182,6 +196,64 @@ body {
 }
 
 
+/* POR GÉNERO */
+
+#columnaGeneros {
+    border-right: 1px solid #2bd1ff;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    padding-bottom: 15px;
+    cursor: pointer;
+}
+
+#columnaGeneros:hover,
+#columnaGeneros:focus {
+    display: block;
+    color: white !important;
+    box-shadow: 0 0 5px white, 0 0 15px #6fdcfa, 0 0 30px white;
+    transition: 1s;
+}
+
+.dropdown-item {
+    display: block;
+    font-weight: 200;
+    font-size: 20px;
+    margin: 0 auto;
+    background-color: #141215;
+    color: #2bd1ff;
+    border: none;
+    border-top: 1px solid #2bd1ff;
+}
+
+.dropdown-item:hover,
+#imagenGeneros:hover {
+    background-color: #29272b;
+    color: #2bd1ff;
+    transition: 1s;
+    cursor: default;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    margin: 0 auto;
+    text-align: center;
+    border: none;
+}
+
+#imagenGeneros {
+    height: 200px;
+    width: auto;
+    float: right;
+    margin: 0 auto;
+}
+
+#itemGeneros {
+    height: 200px;
+    text-align: left;
+}
+
+
 /* ELEMENTOS GENERALES */
 
 hr {
@@ -191,6 +263,11 @@ hr {
 
 h1 {
     color: #2bd1ff !important;
+}
+
+.display-4 {
+    font-size: 30px;
+    letter-spacing: 8px;
 }
 
 

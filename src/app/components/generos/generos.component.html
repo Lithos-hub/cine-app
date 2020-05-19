@@ -1,1 +1,213 @@
-<p>generos works!</p>
+<div class="jumbotron animated fadeIn fast animated fadeIn fast" id="jumbotronesapp">
+    <h1 class="display-3" style="text-shadow: 0 0 10px black;">Películas por género</h1>
+</div>
+
+
+<div (click)=" dropon1 = !dropon1 " class="col text-info text-center display-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaGeneros">
+    Acción
+    <div *ngIf="dropon1" style="margin-top: 25px;" id="dropdownGeneros">
+        <div class="col">
+            <p *ngFor="let accion of accion" [routerLink]="['/pelicula-generos',accion.id, 'generos']" class="lead dropdown-item text-left" id="itemGeneros">{{ accion.title }}
+                <img class="card-img" id="imagenGeneros" [src]="url + accion.poster_path">
+            </p>
+        </div>
+    </div>
+</div>
+
+<div (click)=" dropon2 = !dropon2 " class="col text-info text-center display-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaGeneros">
+    Aventuras
+    <div *ngIf="dropon2" style="margin-top: 25px;" id="dropdownGeneros">
+        <div class="col">
+            <p *ngFor="let aventura of aventura" [routerLink]="['/pelicula-generos',aventura.id, 'generos']" class="lead dropdown-item text-left" id="itemGeneros">{{ aventura.title }}
+                <img class="card-img" id="imagenGeneros" [src]="url + aventura.poster_path">
+            </p>
+        </div>
+    </div>
+</div>
+
+<div (click)=" dropon3 = !dropon3 " class="col text-info text-center display-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaGeneros">
+    Animación
+    <div *ngIf="dropon3" style="margin-top: 25px;" id="dropdownGeneros">
+        <div class="col">
+            <p *ngFor="let animacion of animacion" [routerLink]="['/pelicula-generos',animacion.id, 'generos']" class="lead dropdown-item text-left" id="itemGeneros">{{ animacion.title }}
+                <img class="card-img" id="imagenGeneros" [src]="url + animacion.poster_path">
+            </p>
+        </div>
+    </div>
+</div>
+
+<div (click)=" dropon4 = !dropon4 " class="col text-info text-center display-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaGeneros">
+    Comedia
+    <div *ngIf="dropon4" style="margin-top: 25px;" id="dropdownGeneros">
+        <div class="col">
+            <p *ngFor="let comedia of comedia" [routerLink]="['/pelicula-generos',comedia.id, 'generos']" class="lead dropdown-item text-left" id="itemGeneros">{{ comedia.title }}
+                <img class="card-img" id="imagenGeneros" [src]="url + comedia.poster_path">
+            </p>
+        </div>
+    </div>
+</div>
+
+<div (click)=" dropon5 = !dropon5 " class="col text-info text-center display-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaGeneros">
+    Crimen
+    <div *ngIf="dropon5" style="margin-top: 25px;" id="dropdownGeneros">
+        <div class="col">
+            <p *ngFor="let crimen of crimen" [routerLink]="['/pelicula-generos',crimen.id, 'generos']" class="lead dropdown-item text-left" id="itemGeneros">{{ crimen.title }}
+                <img class="card-img" id="imagenGeneros" [src]="url + crimen.poster_path">
+            </p>
+        </div>
+    </div>
+</div>
+
+<div (click)=" dropon6 = !dropon6 " class="col text-info text-center display-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaGeneros">
+    Documental
+    <div *ngIf="dropon6" style="margin-top: 25px;" id="dropdownGeneros">
+        <div class="col">
+            <p *ngFor="let documental of documental" [routerLink]="['/pelicula-generos',documental.id, 'generos']" class="lead dropdown-item text-left" id="itemGeneros">{{ documental.title }}
+                <img class="card-img" id="imagenGeneros" [src]="url + documental.poster_path">
+            </p>
+        </div>
+    </div>
+</div>
+
+<div (click)=" dropon7 = !dropon7 " class="col text-info text-center display-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaGeneros">
+    Drama
+    <div *ngIf="dropon7" style="margin-top: 25px;" id="dropdownGeneros">
+        <div class="col">
+            <p *ngFor="let drama of drama" [routerLink]="['/pelicula-generos',drama.id, 'generos']" class="lead dropdown-item text-left" id="itemGeneros">{{ drama.title }}
+                <img class="card-img" id="imagenGeneros" [src]="url + drama.poster_path">
+            </p>
+        </div>
+    </div>
+</div>
+
+<div (click)=" dropon8 = !dropon8 " class="col text-info text-center display-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaGeneros">
+    Familia
+    <div *ngIf="dropon8" style="margin-top: 25px;" id="dropdownGeneros">
+        <div class="col">
+            <p *ngFor="let familia of familia" [routerLink]="['/pelicula-generos',familia.id, 'generos']" class="lead dropdown-item text-left" id="itemGeneros">{{ familia.title }}
+                <img class="card-img" id="imagenGeneros" [src]="url + familia.poster_path">
+            </p>
+        </div>
+    </div>
+</div>
+
+<div (click)=" dropon9 = !dropon9 " class="col text-info text-center display-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaGeneros">
+    Fantasía
+    <div *ngIf="dropon9" style="margin-top: 25px;" id="dropdownGeneros">
+        <div class="col">
+            <p *ngFor="let fantasia of fantasia" [routerLink]="['/pelicula-generos',fantasia.id, 'generos']" class="lead dropdown-item text-left" id="itemGeneros">{{ fantasia.title }}
+                <img class="card-img" id="imagenGeneros" [src]="url + fantasia.poster_path">
+            </p>
+        </div>
+    </div>
+</div>
+
+<div (click)=" dropon10 = !dropon10 " class="col text-info text-center display-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaGeneros">
+    Historia
+    <div *ngIf="dropon10" style="margin-top: 25px;" id="dropdownGeneros">
+        <div class="col">
+            <p *ngFor="let historia of historia" [routerLink]="['/pelicula-generos',historia.id, 'generos']" class="lead dropdown-item text-left" id="itemGeneros">{{ historia.title }}
+                <img class="card-img" id="imagenGeneros" [src]="url + historia.poster_path">
+            </p>
+        </div>
+    </div>
+</div>
+
+<div (click)=" dropon11 = !dropon11 " class="col text-info text-center display-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaGeneros">
+    Terror
+    <div *ngIf="dropon11" style="margin-top: 25px;" id="dropdownGeneros">
+        <div class="col">
+            <p *ngFor="let terror of terror" [routerLink]="['/pelicula-generos',terror.id, 'generos']" class="lead dropdown-item text-left" id="itemGeneros">{{ terror.title }}
+                <img class="card-img" id="imagenGeneros" [src]="url + terror.poster_path">
+            </p>
+        </div>
+    </div>
+</div>
+
+<div (click)=" dropon12 = !dropon12 " class="col text-info text-center display-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaGeneros">
+    Música
+    <div *ngIf="dropon12" style="margin-top: 25px;" id="dropdownGeneros">
+        <div class="col">
+            <p *ngFor="let musica of musica" [routerLink]="['/pelicula-generos',musica.id, 'generos']" class="lead dropdown-item text-left" id="itemGeneros">{{ musica.title }}
+                <img class="card-img" id="imagenGeneros" [src]="url + musica.poster_path">
+            </p>
+        </div>
+    </div>
+</div>
+
+<div (click)=" dropon13 = !dropon13 " class="col text-info text-center display-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaGeneros">
+    Misterio
+    <div *ngIf="dropon13" style="margin-top: 25px;" id="dropdownGeneros">
+        <div class="col">
+            <p *ngFor="let misterio of misterio" [routerLink]="['/pelicula-generos',misterio.id, 'generos']" class="lead dropdown-item text-left" id="itemGeneros">{{ misterio.title }}
+                <img class="card-img" id="imagenGeneros" [src]="url + misterio.poster_path">
+            </p>
+        </div>
+    </div>
+</div>
+
+<div (click)=" dropon14 = !dropon14 " class="col text-info text-center display-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaGeneros">
+    Romance
+    <div *ngIf="dropon14" style="margin-top: 25px;" id="dropdownGeneros">
+        <div class="col">
+            <p *ngFor="let romance of romance" [routerLink]="['/pelicula-generos',romance.id, 'generos']" class="lead dropdown-item text-left" id="itemGeneros">{{ romance.title }}
+                <img class="card-img" id="imagenGeneros" [src]="url + romance.poster_path">
+            </p>
+        </div>
+    </div>
+</div>
+
+<div (click)=" dropon15 = !dropon15 " class="col text-info text-center display-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaGeneros">
+    Sci-fi
+    <div *ngIf="dropon15" style="margin-top: 25px;" id="dropdownGeneros">
+        <div class="col">
+            <p *ngFor="let cienciaficcion of cienciaficcion" [routerLink]="['/pelicula-generos',cienciaficcion.id, 'generos']" class="lead dropdown-item text-left" id="itemGeneros">{{ cienciaficcion.title }}
+                <img class="card-img" id="imagenGeneros" [src]="url + cienciaficcion.poster_path">
+            </p>
+        </div>
+    </div>
+</div>
+
+<div (click)=" dropon16 = !dropon16 " class="col text-info text-center display-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaGeneros">
+    Películas de TV
+    <div *ngIf="dropon16" style="margin-top: 25px;" id="dropdownGeneros">
+        <div class="col">
+            <p *ngFor="let peliculastv of peliculastv" [routerLink]="['/pelicula-generos',peliculastv.id, 'generos']" class="lead dropdown-item text-left" id="itemGeneros">{{ peliculastv.title }}
+                <img class="card-img" id="imagenGeneros" [src]="url + peliculastv.poster_path">
+            </p>
+        </div>
+    </div>
+</div>
+
+<div (click)=" dropon17 = !dropon17 " class="col text-info text-center display-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaGeneros">
+    Suspense
+    <div *ngIf="dropon17" style="margin-top: 25px;" id="dropdownGeneros">
+        <div class="col">
+            <p *ngFor="let suspense of suspense" [routerLink]="['/pelicula-generos',suspense.id, 'generos']" class="lead dropdown-item text-left" id="itemGeneros">{{ suspense.title }}
+                <img class="card-img" id="imagenGeneros" [src]="url + suspense.poster_path">
+            </p>
+        </div>
+    </div>
+</div>
+
+<div (click)=" dropon18 = !dropon18 " class="col text-info text-center display-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaGeneros">
+    Bélica
+    <div *ngIf="dropon18" style="margin-top: 25px;" id="dropdownGeneros">
+        <div class="col">
+            <p *ngFor="let belica of belica" [routerLink]="['/pelicula-generos',belica.id, 'generos']" class="lead dropdown-item text-left" id="itemGeneros">{{ belica.title }}
+                <img class="card-img" id="imagenGeneros" [src]="url + belica.poster_path">
+            </p>
+        </div>
+    </div>
+</div>
+
+<div (click)=" dropon19 = !dropon19 " class="col text-info text-center display-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaGeneros">
+    Western
+    <div *ngIf="dropon19" style="margin-top: 25px;" id="dropdownGeneros">
+        <div class="col">
+            <p *ngFor="let western of western" [routerLink]="['/pelicula-generos',western.id, 'generos']" class="lead dropdown-item text-left" id="itemGeneros">{{ western.title }}
+                <img class="card-img" id="imagenGeneros" [src]="url + western.poster_path">
+            </p>
+        </div>
+    </div>
+</div>

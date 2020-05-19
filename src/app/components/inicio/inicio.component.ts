@@ -11,7 +11,7 @@ export class InicioComponent implements OnInit {
 
   url = 'https://image.tmdb.org/t/p/w500';
 
-  imagenes: any[] = [];
+  imagenes: any;
 
   constructor(public _galeria: GaleriaInicioService){
 

@@ -1,0 +1,39 @@
+<div class="jumbotron animated fadeIn fast responsive" id="jumbotronesapp">
+    <h1 class="display-3 embed-responsive" style="text-shadow: 0 0 10px black;">Ficha de película</h1>
+</div>
+
+<div class="container animated fadeIn fast" *ngIf="peliculainicio">
+
+
+
+    <div class="card mb-5 w-100" style="background-color: transparent; border: none;">
+
+        <div class="row no-gutters responsive">
+
+            <div class="col-md-5 responsive">
+
+                <img [src]="url + peliculainicio.poster_path" class="card-img-top " alt="peliculaimg" style="box-shadow: 0px 0px 15px rgb(36, 36, 36), 0px 0px 5px #323335; max-width: 430px;">
+            </div>
+
+            <div class="col-md-7 responsive">
+                <div class="card-body" style="box-shadow: 0px 0px 5px #7b8797, 0px 0px 10px #c9f3ff; min-height: 650px;">
+                    <h5 class="card-title display-4 text-center text-info"> {{ peliculainicio.title | uppercase }} </h5>
+
+                    <hr>
+                    <p class="card-text lead text-light text-justify"> {{ peliculainicio.overview }} </p>
+                    <p style="position: absolute; right: 10px; bottom: 10px;" class="card-text lead text-info text-xl-right">Fecha de lanzamiento: {{ peliculainicio.release_date }}</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <button [routerLink]="['/inicio']" class="btn btn-outline-danger" type="button" style="margin-top: 35px;">Regresar</button>
+    </div>
+
+
+
+
+
+</div>

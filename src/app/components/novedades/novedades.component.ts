@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { NovedadesService } from '../../services/novedades.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-novedades',
@@ -11,8 +10,8 @@ export class NovedadesComponent implements OnInit {
   novedades: any;
 
   // tslint:disable-next-line: variable-name
-  constructor(public _novedades: NovedadesService,
-              private router: Router){
+  constructor(public _novedades: NovedadesService
+              ){
 
                 this._novedades.getNovedades()
                 .subscribe( (data: any) => {
