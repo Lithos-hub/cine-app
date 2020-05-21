@@ -29,6 +29,7 @@ import { AboutComponent } from './components/about/about.component';
 // PIPES
 import { ImagenPeliculaPipe } from './pipes/imagen-pelicula.pipe';
 import { PeliculaSelecGeneroComponent } from './components/pelicula-selec-genero/pelicula-selec-genero.component';
+import { PeliculaSelecRankingComponent } from './components/pelicula-selec-ranking/pelicula-selec-ranking.component';
 
 
 
@@ -47,7 +48,8 @@ import { PeliculaSelecGeneroComponent } from './components/pelicula-selec-genero
     AboutComponent,
     ImagenPeliculaPipe,
     PeliculaSelecInicioComponent,
-    PeliculaSelecGeneroComponent
+    PeliculaSelecGeneroComponent,
+    PeliculaSelecRankingComponent
   ],
   imports: [
     BrowserModule,

@@ -147,7 +147,7 @@ body {
 
 #jumbotronesapp {
     background-color: #2f2d30;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 
@@ -199,11 +199,11 @@ body {
 /* POR GÉNERO */
 
 #columnaGeneros {
-    border-right: 1px solid #2bd1ff;
     margin: 0 auto;
     text-align: center;
     display: block;
     padding-bottom: 15px;
+    padding-top: 15px;
     cursor: pointer;
 }
 
@@ -231,7 +231,6 @@ body {
     background-color: #29272b;
     color: #2bd1ff;
     transition: 1s;
-    cursor: default;
     cursor: pointer;
 }
 
@@ -254,6 +253,32 @@ body {
 }
 
 
+/* RANKING */
+
+#gridRanking {
+    padding: 20px;
+    text-align: center;
+}
+
+#gridRanking:hover {
+    border-bottom: 5px solid rgb(178, 243, 255);
+    transition: 0.3s;
+    color: white;
+    cursor: pointer;
+}
+
+#columnaRanking {
+    margin: 0 auto;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+#columnaRanking:hover {
+    box-shadow: 0 0 5px white, 0 0 15px #6fdcfa, 0 0 30px white;
+    transition: 1s;
+}
+
+
 /* ELEMENTOS GENERALES */
 
 hr {
@@ -268,6 +293,15 @@ h1 {
 .display-4 {
     font-size: 30px;
     letter-spacing: 8px;
+}
+
+.display-3 {
+    font-size: 60px;
+    letter-spacing: 8px;
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 

@@ -11,6 +11,7 @@ import { PeliculaSelecNovedadesComponent } from './components/pelicula-selec-nov
 import { AboutComponent } from './components/about/about.component';
 import { PeliculaSelecInicioComponent } from './components/pelicula-selec-inicio/pelicula-selec-inicio.component';
 import { PeliculaSelecGeneroComponent } from './components/pelicula-selec-genero/pelicula-selec-genero.component';
+import { PeliculaSelecRankingComponent } from './components/pelicula-selec-ranking/pelicula-selec-ranking.component';
 
 
 
@@ -30,8 +31,10 @@ const APP_ROUTES: Routes = [
     {path: 'pelicula-novedades/:id/:pag', component: PeliculaSelecNovedadesComponent },
     {path: 'pelicula-inicio/:id/:pag', component: PeliculaSelecInicioComponent },
     {path: 'pelicula-generos/:id/:pag', component: PeliculaSelecGeneroComponent },
+    {path: 'pelicula-ranking/:id/:pag', component: PeliculaSelecRankingComponent },
     {path: 'generos', component: GenerosComponent },
     {path: 'ranking', component: RankingComponent },
+    {path: 'ranking/#yearone', component: RankingComponent },
     {path: 'trailers', component: TrailersComponent },
     {path: 'critica', component: CriticaComponent},
     {path: 'about', component: AboutComponent},

@@ -1,18 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { FichaPeliculaService } from '../../services/ficha-pelicula.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-pelicula-selec-inicio',
-  templateUrl: './pelicula-selec-inicio.component.html',
+  selector: 'app-pelicula-selec-ranking',
+  templateUrl: './pelicula-selec-ranking.component.html',
   styles: [
   ]
 })
-export class PeliculaSelecInicioComponent implements OnInit {
+export class PeliculaSelecRankingComponent implements OnInit {
+
 
   url = 'https://image.tmdb.org/t/p/w500';
 
-  peliculainicio: any;
+  pelicularanking: any;
 
   constructor(public activatedRoute: ActivatedRoute,
               public _fs: FichaPeliculaService) {
@@ -20,10 +21,9 @@ export class PeliculaSelecInicioComponent implements OnInit {
             this.activatedRoute.params.subscribe( parametros => {
               console.log(parametros);
               this._fs.getFichaPelicula( parametros['id'] )
-                  .subscribe( pelicula => this.peliculainicio = pelicula );
+                  .subscribe( pelicula => this.pelicularanking = pelicula );
                   });
     }
   ngOnInit(): void {
   }
-
 }

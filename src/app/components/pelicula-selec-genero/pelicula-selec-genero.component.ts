@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PorgeneroService } from '../../services/porgenero.service';
 import { ActivatedRoute } from '@angular/router';
+import { FichaPeliculaService } from '../../services/ficha-pelicula.service';
 
 @Component({
   selector: 'app-pelicula-selec-genero',
@@ -15,11 +15,11 @@ export class PeliculaSelecGeneroComponent implements OnInit {
   peliculagenero: any;
 
   constructor(public activatedRoute: ActivatedRoute,
-              public _generos: PorgeneroService) {
+              public _fs: FichaPeliculaService) {
 
             this.activatedRoute.params.subscribe( parametros => {
               console.log(parametros);
-              this._generos.getPelicula( parametros['id'] )
+              this._fs.getFichaPelicula( parametros['id'] )
                   .subscribe( pelicula => this.peliculagenero = pelicula );
                   });
     }

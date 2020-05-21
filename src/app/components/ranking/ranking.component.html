@@ -1,1 +1,241 @@
-<p>ranking works!</p>
+<div class="jumbotron animated fadeIn fast responsive" id="jumbotronInicio">
+    <h1 class="display-3" style="text-shadow: 0 0 10px black;">Ranking</h1>
+    <p class="lead text-light" style="text-shadow: 0 0 10px black;">Las mejores películas de la década (2010-2020)</p>
+</div>
+
+
+<div class="row justify-content-center animated fadeIn fast" style="border-bottom: 1px solid rgb(91, 188, 212); margin-bottom: 25px; margin-top: 0px;">
+    <a href="ranking/#yearzero>">
+        <div id="gridRanking" class="col text-info text-center">2010</div>
+    </a>
+    <a href="ranking/#yearone">
+        <div id="gridRanking" class="col text-info text-center">2011</div>
+    </a>
+    <a href="ranking/#yeartwo">
+        <div id="gridRanking" class="col text-info text-center">2012</div>
+    </a>
+    <a href="ranking/#yearthree">
+        <div id="gridRanking" class="col text-info text-center">2013</div>
+    </a>
+    <a href="ranking/#yearfour">
+        <div id="gridRanking" class="col text-info text-center">2014</div>
+    </a>
+    <a href="ranking/#yearfive">
+        <div id="gridRanking" class="col text-info text-center">2015</div>
+    </a>
+    <a href="ranking/#yearsix">
+        <div id="gridRanking" class="col text-info text-center">2016</div>
+    </a>
+    <a href="ranking/#yearseven">
+        <div id="gridRanking" class="col text-info text-center">2017</div>
+    </a>
+    <a href="ranking/#yeareight">
+        <div id="gridRanking" class="col text-info text-center">2018</div>
+    </a>
+    <a href="ranking/#yearnine">
+        <div id="gridRanking" class="col text-info text-center">2019</div>
+    </a>
+    <a href="ranking/#yearten">
+        <div id="gridRanking" class="col text-info text-center">2020</div>
+    </a>
+
+</div>
+
+
+
+
+<a id="yearzero" class="animated fadeIn fast">
+    <div (click)=" dropon0 = !dropon0 " class="col text-info text-center display-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaRanking">2010</div>
+</a>
+
+<div class="animated fadeIn fast" *ngIf="dropon0" style="margin-top: 25px;" id="columnaRanking">
+
+    <div class="row row-cols-1 row-cols-md-4" *ngIf="yearzero">
+        <div class="card w-100" *ngFor="let yearzero of yearzero; let i = index" style="max-width: 300px; background-color: transparent; border: none;">
+            <div class="col mb-2">
+                <div class="img-thumbnail" [routerLink]="['/pelicula-ranking',yearzero.id, 'ranking']" id="imagenNovedades" [ngStyle]="{'background-image': 'url( '+ ( yearzero | novedadesImagen ) +' )'}">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center text-info"> {{ yearzero.title }}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<a id="yearone">
+    <div (click)=" dropon1 = !dropon1 " class="col text-info text-center display-4 animated fadeIn fast" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaRanking">2011</div>
+</a>
+
+<div class="animated fadeIn fast" *ngIf="dropon1" style="margin-top: 25px;" id="columnaRanking">
+
+    <div class="row row-cols-1 row-cols-md-4" *ngIf="yearone">
+        <div class="card w-100" *ngFor="let yearone of yearone; let i = index" style="max-width: 300px; background-color: transparent; border: none;">
+            <div class="col mb-2">
+                <div class="img-thumbnail" [routerLink]="['/pelicula-ranking',yearone.id, 'ranking']" id="imagenNovedades" [ngStyle]="{'background-image': 'url( '+ ( yearone | novedadesImagen ) +' )'}">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center text-info"> {{ yearone.title }}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<a id="yeartwo">
+    <div (click)=" dropon2 = !dropon2 " class="col text-info text-center display-4 animated fadeIn fast" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaRanking">2012</div>
+</a>
+
+<div class="animated fadeIn fast" *ngIf="dropon2" style="margin-top: 25px;" id="columnaRanking">
+
+    <div class="row row-cols-1 row-cols-md-4" *ngIf="yeartwo">
+        <div class="card w-100" *ngFor="let yeartwo of yeartwo; let i = index" style="max-width: 300px; background-color: transparent; border: none;">
+            <div class="col mb-2">
+                <div class="img-thumbnail" [routerLink]="['/pelicula-ranking',yeartwo.id, 'ranking']" id="imagenNovedades" [ngStyle]="{'background-image': 'url( '+ ( yeartwo | novedadesImagen ) +' )'}">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center text-info"> {{ yeartwo.title }}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<a id="yearthree">
+    <div (click)=" dropon3 = !dropon3 " class="col text-info text-center display-4 animated fadeIn fast" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaRanking">2013</div>
+</a>
+
+<div class="animated fadeIn fast" *ngIf="dropon3" style="margin-top: 25px;" id="columnaRanking">
+
+    <div class="row row-cols-1 row-cols-md-4" *ngIf="yearthree">
+        <div class="card w-100" *ngFor="let yearthree of yearthree; let i = index" style="max-width: 300px; background-color: transparent; border: none;">
+            <div class="col mb-2">
+                <div class="img-thumbnail" [routerLink]="['/pelicula-ranking',yearthree.id, 'ranking']" id="imagenNovedades" [ngStyle]="{'background-image': 'url( '+ ( yearthree | novedadesImagen ) +' )'}">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center text-info"> {{ yearthree.title }}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<a id="yearfour">
+    <div (click)=" dropon4 = !dropon4 " class="col text-info text-center display-4 animated fadeIn fast" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaRanking">2014</div>
+</a>
+
+<div class="animated fadeIn fast" *ngIf="dropon4" style="margin-top: 25px;" id="columnaRanking">
+
+    <div class="row row-cols-1 row-cols-md-4" *ngIf="yearfour">
+        <div class="card w-100" *ngFor="let yearfour of yearfour; let i = index" style="max-width: 300px; background-color: transparent; border: none;">
+            <div class="col mb-2">
+                <div class="img-thumbnail" [routerLink]="['/pelicula-ranking',yearfour.id, 'ranking']" id="imagenNovedades" [ngStyle]="{'background-image': 'url( '+ ( yearfour | novedadesImagen ) +' )'}">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center text-info"> {{ yearfour.title }}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<a id="yearfive">
+    <div (click)=" dropon5 = !dropon5" class="col text-info text-center display-4 animated fadeIn fast" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaRanking">2015</div>
+</a>
+
+<div class="animated fadeIn fast" *ngIf="dropon5" style="margin-top: 25px;" id="columnaRanking">
+
+    <div class="row row-cols-1 row-cols-md-4" *ngIf="yearfive">
+        <div class="card w-100" *ngFor="let yearfive of yearfive; let i = index" style="max-width: 300px; background-color: transparent; border: none;">
+            <div class="col mb-2">
+                <div class="img-thumbnail" [routerLink]="['/pelicula-ranking',yearfive.id, 'ranking']" id="imagenNovedades" [ngStyle]="{'background-image': 'url( '+ ( yearfive | novedadesImagen ) +' )'}">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center text-info"> {{ yearfive.title }}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<a id="yearsix">
+    <div (click)=" dropon6 = !dropon6 " class="col text-info text-center display-4 animated fadeIn fast" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaRanking">2016</div>
+</a>
+
+<div class="animated fadeIn fast" *ngIf="dropon6" style="margin-top: 25px;" id="columnaRanking">
+
+    <div class="row row-cols-1 row-cols-md-4" *ngIf="yearsix">
+        <div class="card w-100" *ngFor="let yearsix of yearsix; let i = index" style="max-width: 300px; background-color: transparent; border: none;">
+            <div class="col mb-2">
+                <div class="img-thumbnail" [routerLink]="['/pelicula-ranking',yearsix.id, 'ranking']" id="imagenNovedades" [ngStyle]="{'background-image': 'url( '+ ( yearsix | novedadesImagen ) +' )'}">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center text-info"> {{ yearsix.title }}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<a id="yearseven">
+    <div (click)=" dropon7 = !dropon7 " class="col text-info text-center display-4 animated fadeIn fast" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaRanking">2017</div>
+</a>
+
+<div class="animated fadeIn fast" *ngIf="dropon7" style="margin-top: 25px;" id="columnaRanking">
+
+    <div class="row row-cols-1 row-cols-md-4" *ngIf="yearseven">
+        <div class="card w-100" *ngFor="let yearseven of yearseven; let i = index" style="max-width: 300px; background-color: transparent; border: none;">
+            <div class="col mb-2">
+                <div class="img-thumbnail" [routerLink]="['/pelicula-ranking',yearseven.id, 'ranking']" id="imagenNovedades" [ngStyle]="{'background-image': 'url( '+ ( yearseven | novedadesImagen ) +' )'}">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center text-info"> {{ yearseven.title }}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<a id="yeareight">
+    <div (click)=" dropon8 = !dropon8 " class="col text-info text-center display-4 animated fadeIn fast" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaRanking">2018</div>
+</a>
+<div class="animated fadeIn fast" *ngIf="dropon8" style="margin-top: 25px;" id="columnaRanking">
+
+    <div class="row row-cols-1 row-cols-md-4" *ngIf="yeareight">
+        <div class="card w-100" *ngFor="let yeareight of yeareight; let i = index" style="max-width: 300px; background-color: transparent; border: none;">
+            <div class="col mb-2">
+                <div class="img-thumbnail" [routerLink]="['/pelicula-ranking',yeareight.id, 'ranking']" id="imagenNovedades" [ngStyle]="{'background-image': 'url( '+ ( yeareight | novedadesImagen ) +' )'}">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center text-info"> {{ yeareight.title }}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<a id="yearnine">
+    <div (click)=" dropon9 = !dropon9 " class="col text-info text-center display-4 animated fadeIn fast" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaRanking">2019</div>
+</a>
+<div class="animated fadeIn fast" *ngIf="dropon9" style="margin-top: 25px;" id="columnaRanking">
+
+    <div class="row row-cols-1 row-cols-md-4" *ngIf="yearnine">
+        <div class="card w-100" *ngFor="let yearnine of yearnine; let i = index" style="max-width: 300px; background-color: transparent; border: none;">
+            <div class="col mb-2">
+                <div class="img-thumbnail" [routerLink]="['/pelicula-ranking',yearnine.id, 'ranking']" id="imagenNovedades" [ngStyle]="{'background-image': 'url( '+ ( yearnine | novedadesImagen ) +' )'}">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center text-info"> {{ yearnine.title }}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<a id="yearten">
+    <div (click)=" dropon10 = !dropon10 " class="col text-info text-center display-4 animated fadeIn fast" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaRanking">2020</div>
+</a>
+<div class="animated fadeIn fast" *ngIf="dropon10" style="margin-top: 25px;" id="columnaRanking">
+
+    <div class="row row-cols-1 row-cols-md-4" *ngIf="yearten">
+        <div class="card w-100" *ngFor="let yearten of yearten; let i = index" style="max-width: 300px; background-color: transparent; border: none;">
+            <div class="col mb-2">
+                <div class="img-thumbnail" [routerLink]="['/pelicula-ranking',yearten.id, 'ranking']" id="imagenNovedades" [ngStyle]="{'background-image': 'url( '+ ( yearten | novedadesImagen ) +' )'}">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center text-info"> {{ yearten.title }}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
