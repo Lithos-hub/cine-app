@@ -1,41 +1,52 @@
+<a id="1"></a>
+
 <div class="jumbotron animated fadeIn fast responsive" id="jumbotronInicio">
     <h1 class="display-3" style="text-shadow: 0 0 10px black;">Ranking</h1>
     <p class="lead text-light" style="text-shadow: 0 0 10px black;">Las mejores películas de la década (2010-2020)</p>
 </div>
 
+<a id="botonSubir" (click)="scroll(1)">
+    <svg class="bi bi-arrow-up" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M8 3.5a.5.5 0 01.5.5v9a.5.5 0 01-1 0V4a.5.5 0 01.5-.5z" clip-rule="evenodd"/>
+        <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 01.708 0l3 3a.5.5 0 01-.708.708L8 3.707 5.354 6.354a.5.5 0 11-.708-.708l3-3z" clip-rule="evenodd"/>
+      </svg>
+</a>
+
 
 <div class="row justify-content-center animated fadeIn fast" style="border-bottom: 1px solid rgb(91, 188, 212); margin-bottom: 25px; margin-top: 0px;">
-    <a href="ranking/#yearzero>">
+    <a (click)="scroll(2010)">
         <div id="gridRanking" class="col text-info text-center">2010</div>
     </a>
-    <a href="ranking/#yearone">
+    <a (click)="scroll(2011)">
         <div id="gridRanking" class="col text-info text-center">2011</div>
     </a>
-    <a href="ranking/#yeartwo">
+    <a (click)="scroll(2012)">
         <div id="gridRanking" class="col text-info text-center">2012</div>
     </a>
-    <a href="ranking/#yearthree">
+    <a (click)="scroll(2013)">
         <div id="gridRanking" class="col text-info text-center">2013</div>
     </a>
-    <a href="ranking/#yearfour">
+    <a (click)="scroll(2014)">
         <div id="gridRanking" class="col text-info text-center">2014</div>
     </a>
-    <a href="ranking/#yearfive">
+    <a (click)="scroll(2015)">
         <div id="gridRanking" class="col text-info text-center">2015</div>
     </a>
-    <a href="ranking/#yearsix">
+    <a (click)="scroll(2016)">
         <div id="gridRanking" class="col text-info text-center">2016</div>
     </a>
-    <a href="ranking/#yearseven">
+    <a (click)="scroll(2017)">
         <div id="gridRanking" class="col text-info text-center">2017</div>
     </a>
-    <a href="ranking/#yeareight">
+    <a (click)="scroll(2018)">
         <div id="gridRanking" class="col text-info text-center">2018</div>
     </a>
-    <a href="ranking/#yearnine">
+
+    <a (click)="scroll(2019)">
         <div id="gridRanking" class="col text-info text-center">2019</div>
     </a>
-    <a href="ranking/#yearten">
+
+    <a (click)="scroll(2020)">
         <div id="gridRanking" class="col text-info text-center">2020</div>
     </a>
 
@@ -44,7 +55,7 @@
 
 
 
-<a id="yearzero" class="animated fadeIn fast">
+<a id="2010">
     <div (click)=" dropon0 = !dropon0 " class="col text-info text-center display-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaRanking">2010</div>
 </a>
 
@@ -62,7 +73,7 @@
         </div>
     </div>
 </div>
-<a id="yearone">
+<a id="2011">
     <div (click)=" dropon1 = !dropon1 " class="col text-info text-center display-4 animated fadeIn fast" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaRanking">2011</div>
 </a>
 
@@ -80,7 +91,7 @@
         </div>
     </div>
 </div>
-<a id="yeartwo">
+<a id="2012">
     <div (click)=" dropon2 = !dropon2 " class="col text-info text-center display-4 animated fadeIn fast" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaRanking">2012</div>
 </a>
 
@@ -98,7 +109,7 @@
         </div>
     </div>
 </div>
-<a id="yearthree">
+<a id="2013">
     <div (click)=" dropon3 = !dropon3 " class="col text-info text-center display-4 animated fadeIn fast" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaRanking">2013</div>
 </a>
 
@@ -116,7 +127,7 @@
         </div>
     </div>
 </div>
-<a id="yearfour">
+<a id="2014">
     <div (click)=" dropon4 = !dropon4 " class="col text-info text-center display-4 animated fadeIn fast" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaRanking">2014</div>
 </a>
 
@@ -134,7 +145,7 @@
         </div>
     </div>
 </div>
-<a id="yearfive">
+<a id="2015">
     <div (click)=" dropon5 = !dropon5" class="col text-info text-center display-4 animated fadeIn fast" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaRanking">2015</div>
 </a>
 
@@ -152,7 +163,7 @@
         </div>
     </div>
 </div>
-<a id="yearsix">
+<a id="2016">
     <div (click)=" dropon6 = !dropon6 " class="col text-info text-center display-4 animated fadeIn fast" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaRanking">2016</div>
 </a>
 
@@ -170,7 +181,7 @@
         </div>
     </div>
 </div>
-<a id="yearseven">
+<a id="2017">
     <div (click)=" dropon7 = !dropon7 " class="col text-info text-center display-4 animated fadeIn fast" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaRanking">2017</div>
 </a>
 
@@ -188,7 +199,7 @@
         </div>
     </div>
 </div>
-<a id="yeareight">
+<a id="2018">
     <div (click)=" dropon8 = !dropon8 " class="col text-info text-center display-4 animated fadeIn fast" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaRanking">2018</div>
 </a>
 <div class="animated fadeIn fast" *ngIf="dropon8" style="margin-top: 25px;" id="columnaRanking">
@@ -205,7 +216,7 @@
         </div>
     </div>
 </div>
-<a id="yearnine">
+<a id="2019">
     <div (click)=" dropon9 = !dropon9 " class="col text-info text-center display-4 animated fadeIn fast" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaRanking">2019</div>
 </a>
 <div class="animated fadeIn fast" *ngIf="dropon9" style="margin-top: 25px;" id="columnaRanking">
@@ -222,7 +233,7 @@
         </div>
     </div>
 </div>
-<a id="yearten">
+<a id="2020">
     <div (click)=" dropon10 = !dropon10 " class="col text-info text-center display-4 animated fadeIn fast" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="columnaRanking">2020</div>
 </a>
 <div class="animated fadeIn fast" *ngIf="dropon10" style="margin-top: 25px;" id="columnaRanking">

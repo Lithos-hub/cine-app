@@ -57,7 +57,7 @@ import { PeliculaSelecRankingComponent } from './components/pelicula-selec-ranki
     HttpClientModule,
     HttpClientJsonpModule,
     BrowserAnimationsModule
-  ],
+    ],
   providers: [ PopularesService ],
   bootstrap: [AppComponent]
 })

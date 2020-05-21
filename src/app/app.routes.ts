@@ -12,6 +12,8 @@ import { AboutComponent } from './components/about/about.component';
 import { PeliculaSelecInicioComponent } from './components/pelicula-selec-inicio/pelicula-selec-inicio.component';
 import { PeliculaSelecGeneroComponent } from './components/pelicula-selec-genero/pelicula-selec-genero.component';
 import { PeliculaSelecRankingComponent } from './components/pelicula-selec-ranking/pelicula-selec-ranking.component';
+import { NgModule } from '@angular/core';
+
 
 
 
@@ -34,11 +36,20 @@ const APP_ROUTES: Routes = [
     {path: 'pelicula-ranking/:id/:pag', component: PeliculaSelecRankingComponent },
     {path: 'generos', component: GenerosComponent },
     {path: 'ranking', component: RankingComponent },
-    {path: 'ranking/#yearone', component: RankingComponent },
     {path: 'trailers', component: TrailersComponent },
     {path: 'critica', component: CriticaComponent},
     {path: 'about', component: AboutComponent},
     {path: '**', pathMatch: 'full', redirectTo: 'inicio'}
 ];
 
+@NgModule({
+    imports: [
+        RouterModule.forRoot(APP_ROUTES, {
+            anchorScrolling: 'enabled',
+        })
+    ]
+})
+
 export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES);
+
+

@@ -110,8 +110,11 @@ export class RankingComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  anchor() {
-
+  scroll(sectionId) {
+    let element = document.getElementById(sectionId);
+    if(element) {
+      element.scrollIntoView();
+    }
   }
 
 }
