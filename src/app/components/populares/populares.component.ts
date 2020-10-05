@@ -20,6 +20,13 @@ export class PopularesComponent implements OnInit {
           console.log(data.results);
           this.populares = data.results;
       });
+        this._ps.getTrailersPopulares()
+          .subscribe( (data: any) => {
+          console.log(data.results);
+          this.populares = data.results;
+      });
+
+
   }
   ngOnInit(): void {
   }

@@ -42,13 +42,6 @@ const APP_ROUTES: Routes = [
     {path: '**', pathMatch: 'full', redirectTo: 'inicio'}
 ];
 
-@NgModule({
-    imports: [
-        RouterModule.forRoot(APP_ROUTES, {
-            anchorScrolling: 'enabled',
-        })
-    ]
-})
 
 export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES);
 

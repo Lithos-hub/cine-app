@@ -1,7 +1,7 @@
 <a id="1"></a>
 
 <div class="jumbotron animated fadeIn fast responsive" id="jumbotronInicio">
-    <h1 class="display-3" style="text-shadow: 0 0 10px black;">Ranking</h1>
+    <h1 class="display-3 embed-" style="text-shadow: 0 0 10px black;">Ranking</h1>
     <p class="lead text-light" style="text-shadow: 0 0 10px black;">Las mejores películas de la década (2010-2020)</p>
 </div>
 
@@ -61,7 +61,7 @@
 
 <div class="animated fadeIn fast" *ngIf="dropon0" style="margin-top: 25px;" id="columnaRanking">
 
-    <div class="row row-cols-1 row-cols-md-4" *ngIf="yearzero">
+    <div class="row row-cols-1 row-cols-md-4" *ngIf="yearzero" style="margin: 0 auto; text-align: center;">
         <div class="card w-100" *ngFor="let yearzero of yearzero; let i = index" style="max-width: 300px; background-color: transparent; border: none;">
             <div class="col mb-2">
                 <div class="img-thumbnail" [routerLink]="['/pelicula-ranking',yearzero.id, 'ranking']" id="imagenNovedades" [ngStyle]="{'background-image': 'url( '+ ( yearzero | novedadesImagen ) +' )'}">

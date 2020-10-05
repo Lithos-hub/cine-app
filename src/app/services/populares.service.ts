@@ -20,4 +20,10 @@ export class PopularesService {
 
   }
 
+  getTrailersPopulares() {
+    const url = `${ this.urlMoviedb }/discover/movie?api_key=${ this.apikey }&language=es-ES&sort_by=popularity.desc&include_adult=true&include_video=true&page=1`;
+
+    return this.http.jsonp( url, 'callback=JSON_CALLBACK' );
+  }
+
 }

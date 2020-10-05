@@ -139,15 +139,16 @@ body {
 
 #jumbotronInicio {
     background-color: #2f2d30;
-    margin: 0 auto;
     height: 180px;
-    width: auto;
+    width: 100%;
     padding-top: 50px;
+    margin-bottom: 0px;
 }
 
 #jumbotronesapp {
     background-color: #2f2d30;
     margin-bottom: 40px;
+    width: 100%;
 }
 
 
@@ -368,17 +369,15 @@ a:hover {
 }
 
 ::-webkit-scrollbar-track {
-    background: #212022;
-    border: 5px solid #2bd1ff;
-    width: 10;
+    background-color: #2bd1ff;
+    width: 5;
 }
 
 ::-webkit-scrollbar-thumb {
     background: #141215;
-    height: 100px;
-    border-radius: 15px
 }
 
 ::-webkit-scrollbar-thumb:hover {
     background: #334051;
+    transition: 1s;
 }
